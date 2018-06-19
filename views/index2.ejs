@@ -1,0 +1,246 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Parser Demo</title>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<link href="lib/bootstrap-slider/bootstrap-slider.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <a class="logo" href="#"><img src="images/logo.png"/> <span>Parser Demo</span></a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                          <span class="select_outer"><i class="fa fa-location-arrow"></i> 
+                       <!--   <select class="select_box" >
+                            <option value="United States">United States</option>
+                            <option value="india">India</option>
+                          </select>-->
+                        </span>  
+                        
+                           <a class="btn btn-default btn-select btn-select-light">
+                            <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                            <span class="btn-select-value">United States</span>
+                              <ul>
+                                 <div class="listing_scroll">
+                                    <li>Afghanistan</li>
+                                    <li>Albania   </li>
+                                    <li>India</li>
+                                    <li>Algeria</li>
+                                    <li>American Samoa</li>
+                                    <li>Andorra</li>
+                                    <li>Angola</li>
+                                    <li>Anguilla</li>
+
+                                    <li>Afghanistan</li>
+                                    <li>Albania   </li>
+                                    <li>India</li>
+                                    <li>Algeria</li>
+                                    <li>American Samoa</li>
+                                    <li>Andorra</li>
+                                    <li>Angola</li>
+                                    <li>Anguilla</li>  
+                                 </div> 
+                                 
+                            </ul>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <section class="dropdown_section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                       <form class="form-inline choose_doc_form">
+                          <div class="form-group">
+                            <label for="doctype">Document Type</label>
+                                    <a class="btn btn-default btn-select btn-select-light" id="doc_type"> 
+                                    <input type="hidden" class="btn-select-input" id="" name="" value="" />
+                                    <span class="btn-select-value">Select</span>
+                                     <ul>
+                                        <li>Select</li>
+                                        <li>Driver's License</li>
+                                        <li>Aadhar Card</li>
+                                    </ul>
+                              </a>
+                          </div>
+                           
+                           <div style="" id="select_state" class="form-group">
+                            <label for="doctype">SELECT STATE</label>
+                             <a class="btn btn-default btn-select btn-select-light">
+                                    <input type="hidden" class="btn-select-input" id="" name="" value="Select" />
+                                    <span class="btn-select-value">Select</span>
+                                     <ul>
+                                        <li>Select</li>
+                                        <li>Karnataka</li>
+                                    </ul>
+                              </a>   
+                          </div>
+                          <button id="step_2" type="button" class="btn btn-danger">Go</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section class="contact_section">
+            <div class="container-fluid">
+                <div class="col-md-12 pb-1">
+                    <a class="link" href="/"><img src="images/angle_right.png"/> Back</a>
+                </div>
+                <div class="row">
+                     <div class="col-md-12">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="img_container">
+                                <img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img"/>
+                            </div>    
+                            <p class="font14 pt-1">Aadharcard.png  <span class="font11">248 KB</span></p>
+                         </div>
+                        <div class="col-md-6 col-sm-6">
+                            <h3 class="mt-0 mobile_offset_top">Extracted from your Aadhar card</h3>
+                            
+                           <div class="license_detail_form">
+                                <div class="form-group">
+                                    <label>NAME</label>
+                                   <%= typeof name != 'undefined' ? name : '' %>
+                                </div>
+                                
+                                
+                                
+                                <div class="form-group">
+                                    <label>DATE OF BIRTH</label>
+                                    <%= typeof dob != 'undefined' ? dob : '' %>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Aadhar ID</label>
+                                    <%= typeof aadharid != 'undefined' ? aadharid : '' %>
+
+                                </div>
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <%= typeof gender != 'undefined' ? gender : '' %>
+
+                                </div>
+                            </div>
+                            
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <p>© 2018 Autonom8. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right">
+                        <p>Read our <a href="#">Terms</a>  &  <a href="#">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="lib/bootstrap-slider/bootstrap-slider.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet">
+<script type="text/javascript">
+    $(".range_slider").slider();
+    $(".range_slider").on("slide", function(slideEvt) {
+        $(this).parent('div').siblings('div').find(".range_slider_val>span").text(slideEvt.value);
+    });
+    $("#add_language").click(function(){
+            var read=[];
+            var lang=$('#language').val();
+            if(lang == ''){
+                alert('Please Select Language');
+            }else{
+               ($('#read'). prop("checked") == true)?read.push($('#read').val()):'';
+               ($('#write'). prop("checked") == true)?read.push($('#write').val()):'';
+               ($('#speak'). prop("checked") == true)?read.push($('#speak').val()):''; 
+
+                $('.language_list').append('<div class="col-lg-12 col-md-12 col-xs-12 lang"> <div class="col-lg-4 col-md-4 col-xs-4 pad0 lang_name">'+lang+'</div><div class="col-lg-6 col-md-6 col-xs-6 text-uppercase pad0 lang_status ">'+read.toString()+'</div><div class="col-lg-2 col-md-2 col-xs-2 text-right pad0 lang_action"><a class="delete_lang" href="javascript:void(0);"><i class="fa fa-trash-o"></i></a>      </div></div>');
+            }
+        });
+        $("body").delegate(".delete_lang","click",function(){
+            $(this).parents('.lang').remove();
+        });
+        $(document).ready(function(){
+            $("form").submit(function(){
+                $('input["submit"]').parents('.submit').html('<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right"><span class="green_submit_msg"><img src="img/green_cheked_icon.png"/> Submitted</span>            </div>');
+                alert('hello');
+                return false;
+            });
+        });
+</script>
+
+
+<script>
+        $(document).ready(function () {
+    $(".btn-select").each(function (e) {
+        var value = $(this).find("ul li.selected").html();
+        if (value != undefined) {
+            $(this).find(".btn-select-input").val(value);
+            $(this).find(".btn-select-value").html(value);
+        }
+    });
+});
+
+$(document).on('click', '.btn-select', function (e) {
+    e.preventDefault();
+    var ul = $(this).find("ul");
+    if ($(this).hasClass("active")) {
+        if (ul.find("li").is(e.target)) {
+            var target = $(e.target);
+            target.addClass("selected").siblings().removeClass("selected");
+            var value = target.html();
+            $(this).find(".btn-select-input").val(value);
+            $(this).find(".btn-select-value").html(value);
+        }
+        ul.hide();
+        $(this).removeClass("active");
+    }
+    else {
+        $('.btn-select').not(this).each(function () {
+            $(this).removeClass("active").find("ul").hide();
+        });
+        ul.slideDown(300);
+        $(this).addClass("active");
+    }
+});
+
+$(document).on('click', function (e) {
+    var target = $(e.target).closest(".btn-select");
+    if (!target.length) {
+        $(".btn-select").removeClass("active").find("ul").hide();
+    }
+});
+
+    </script>
